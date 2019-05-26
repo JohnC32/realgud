@@ -1,3 +1,4 @@
+(require 'package)
 ;; list of the all the dependencies, including the dev dependencies
 (defvar dev-packages '(cl-lib loc-changes load-relative test-simple))
 
