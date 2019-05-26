@@ -5,4 +5,4 @@ env:
 
 # run the tests
 script:
-  - NO_CHECK_EMACS_PACKAGES=1 /bin/bash ./autogen.sh && cd test && make check
+  - /bin/bash ./load-prequisites && /bin/bash ./autogen.sh && cd test && make check
