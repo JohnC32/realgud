@@ -2,7 +2,8 @@ language: emacs-lisp
 
 env:
   - EMACS=emacs25
+  - EMACSLOADPATH="./.elpa:"
 
 # run the tests
 script:
-  - EMACSLOADPATH="./.elpa:" /bin/bash ./load-prerequisites.sh && /bin/bash ./autogen.sh && cd test && make check
+  - /bin/bash -x ./load-prerequisites.sh && /bin/bash -x ./autogen.sh && cd test && make check
