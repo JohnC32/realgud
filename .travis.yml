@@ -5,4 +5,4 @@ env:
 
 # run the tests
 script:
-  - /bin/bash ./load-prequisites.sh && /bin/bash ./autogen.sh && cd test && make check
+  - /bin/bash ./load-prerequisites.sh && /bin/bash ./autogen.sh && cd test && make check
