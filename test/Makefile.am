@@ -4,7 +4,7 @@ lisp_files = $(wildcard *.el)
 lisp_LISP = $(lisp_files)
 EXTRA_DIST = $(lisp_files)
 
-PHONY=check test all check-elget test-elget help
+PHONY=check test all help
 
 #: overall help on running the make targets
 help:
@@ -24,10 +24,6 @@ help:
 	@echo
 	@echo "    make test-srcbuf.run"
 	@echo
-	@echo "Tests can also be run via the Emacs el-get package and this loads dependent emacs "
-	@echo "package, like load-relative. To do this, use targets, \"check-elget\","
-	@echo "\"test-elget\", or \"check-short-elget\"."
-	@echo
 	@echo  "To run a specific test like test-srcbuf.el via el-get change \".el\""
 	@echo "to \".elrun\" For example:"
 	@echo
@@ -37,19 +33,12 @@ help:
 #: same thing as "check"
 test: check
 
-#: same thing as "check-elget"
-test-elget: check-elget
-
 test_files := $(wildcard test-*.el)
 
 CHECK_FILES = $(notdir $(test_files:.el=.run))
-EL_GET_CHECK_FILES = $(notdir $(test_files:.el=.elrun))
 
 #: Run all tests
 check: $(CHECK_FILES)
-
-#: Run all tests via el-get
-check-elget: $(EL_GET_CHECK_FILES)
 
 #: Run all tests with minimum verbosity
 check-short:
