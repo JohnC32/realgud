@@ -1,8 +1,7 @@
 language: emacs-lisp
 
 env:
-  - EMACS=emacs25
-  - EMACSLOADPATH="./.elpa:"
+  - EMACS=emacs25 EMACSLOADPATH="./.elpa:"
 
 # run the tests
 script:
