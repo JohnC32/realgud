@@ -1,9 +1,9 @@
 ;; list of the all the dependencies, including the dev dependencies
-(defvar dev-packages '(cl-lib loc-changes load-relative-test-simple))
+(defvar dev-packages '(cl-lib loc-changes load-relative test-simple))
 
 ;; initialize package.el
 (setq package-user-dir
-      (expand-file-name (format ".elpa/%s/elpa" emacs-version)))
+      (expand-file-name (format ".elpa" emacs-version)))
 (message "installing in %s ...\n" package-user-dir)
 (package-initialize)
 (setq package-archives
