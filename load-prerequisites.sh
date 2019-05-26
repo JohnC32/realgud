@@ -1,2 +1,2 @@
 #!/bin/bash
-emacs -batch -script load-prerequisites.el
+emacs -script load-prerequisites.el

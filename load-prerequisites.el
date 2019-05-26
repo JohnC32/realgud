@@ -1,5 +1,5 @@
 (require 'package)
-;; list of the all the dependencies, including the dev dependencies
+;; list of the all the dependencies, including the dev dependenciesn
 (defvar dev-packages '(cl-lib loc-changes load-relative test-simple))
 
 ;; initialize package.el
